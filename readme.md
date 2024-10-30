@@ -86,7 +86,7 @@ Response:
 
 ```json
 {
-  "short_url": "http://localhost:8000/r/example"
+  "short_url": "http://localhost:80/r/example"
 }
 ```
 
