@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  urlshort:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 3  # Change this number based on your scaling needs
+    ports:
+      - "8000"
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - urlshort
+    restart: always
+
+  redis:
+    image: redis:latest
+    volumes:
+      - redis_data:/data  # Volume for Redis data persistence
+    ports:
+      - "6379:6379"  # Exposing Redis on default port
+    restart: always
+
+volumes:
+  redis_data:  # Define a named volume for Redis
