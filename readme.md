@@ -75,7 +75,6 @@ Method: POST
 Payload:
 
 ```json
-Copy code
 {
   "url": "https://example.com",
   "custom_slug": "example",
@@ -88,7 +87,6 @@ Response:
 200 OK - Returns the shortened URL:
 
 ```json
-Copy code
 {
   "short_url": "http://localhost:8000/r/example"
 }
