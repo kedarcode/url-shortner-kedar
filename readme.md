@@ -43,9 +43,8 @@ To run the service locally without Docker:
 Install the required dependencies:
 
 ```bash
-Copy code
-python3 -m venv venv  # Optional: create a virtual environment
-source venv/bin/activate  # Activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -59,7 +58,6 @@ docker run -d --name redis -p 6379:6379 redis
 Run the FastAPI application:
 
 ```bash
-Copy code
 uvicorn main:app --reload
 ```
 
@@ -80,8 +78,8 @@ Payload:
 Copy code
 {
   "url": "https://example.com",
-  "custom_slug": "example",  # Optional
-  "expiration": 60  # Optional (time in minutes default 60)
+  "custom_slug": "example",
+  "expiration": 60
 }
 ```
 
