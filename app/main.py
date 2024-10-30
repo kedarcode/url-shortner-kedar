@@ -54,7 +54,7 @@ async def create_short_url(request: URLRequest):
     if short_code == "Slug not available":
         raise HTTPException(status_code=400, detail=short_code)
 
-    return {"short_url": f"http://localhost:8000/r/{short_code}"}
+    return {"short_url": f"http://localhost:80/r/{short_code}"}
 
 @app.get("/r/{short_code}", dependencies=[
         Depends(RateLimiter(times=30, seconds=60)),

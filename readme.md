@@ -59,7 +59,7 @@ Run the FastAPI application:
 uvicorn main:app --reload
 ```
 
-The application will be available at http://localhost:8000.
+The application will be available at http://localhost:80.
 
 API Documentation
 
