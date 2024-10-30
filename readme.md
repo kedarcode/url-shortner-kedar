@@ -31,7 +31,6 @@ Ensure your terminal is in the project root directory.
 Run the following command to start all services:
 
 ```bash
-Copy code
 docker-compose up --build
 ```
 
@@ -51,7 +50,6 @@ pip install -r requirements.txt
 Start Redis on your local machine (e.g., using Docker):
 
 ```bash
-Copy code
 docker run -d --name redis -p 6379:6379 redis
 ```
 
